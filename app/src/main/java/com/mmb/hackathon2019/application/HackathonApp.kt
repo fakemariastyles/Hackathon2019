@@ -11,7 +11,6 @@ class HackathonApp : Application(){
         component = DaggerAppComponent.builder()
             .appModule(AppModule(this)).build()
     }
-
     companion object{
         lateinit var component : AppComponent
     }
