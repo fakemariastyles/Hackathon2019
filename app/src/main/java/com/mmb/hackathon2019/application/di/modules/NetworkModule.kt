@@ -9,6 +9,16 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
+import android.os.AsyncTask.execute
+import okhttp3.CipherSuite
+import okhttp3.ConnectionSpec
+import okhttp3.TlsVersion
+import org.apache.http.conn.ssl.X509HostnameVerifier
+import org.apache.http.conn.ssl.SSLSocketFactory
+import org.apache.http.params.HttpParams
+import java.util.*
+import javax.net.ssl.HttpsURLConnection
+
 
 @Module
 class NetworkModule{
@@ -29,12 +39,15 @@ class NetworkModule{
             .addInterceptor { chain ->
                 val request = chain.request()
                 val requestBuilder = request.newBuilder()
-                    .header("Authorization", R.string.access_token.toString())
+                    .header("Authorization", com.mmb.hackathon2019.R.string.access_token.toString())
 
                 val newRequest = requestBuilder.build()
                 chain.proceed(newRequest)
             }
-            .build()x
+            .build()
+
+
+
     }
 
     @Provides
