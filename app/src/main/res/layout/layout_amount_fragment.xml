@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#F8E455"
+        android:layout_height="match_parent">
+    <com.google.android.material.textfield.TextInputEditText
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/get_amount"
+            android:layout_margin="15dp"
+            android:hint="سریال کارت را وارد کنید"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:padding="4dp"
+            android:id="@+id/serial"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.google.android.material.button.MaterialButton
+            android:text="استعلام موجودی"
+            android:background="#3F51B5"
+            android:textAlignment="center"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/serial"
+            android:id="@+id/get_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
