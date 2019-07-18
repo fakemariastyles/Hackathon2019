@@ -7,7 +7,7 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 class HackathonRepository @Inject constructor(private val hackathonRemoteDataSource: HackathonRemoteDataSource){
-    fun getResult(serial:String):Single<ResultEntity>{
+    fun getResult(serial:String):Single<ResultEntity?>{
         return hackathonRemoteDataSource.getBalance(serial).map {
             it.toResultEntity()
         }

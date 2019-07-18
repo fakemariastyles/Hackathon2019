@@ -39,7 +39,7 @@ class NetworkModule{
             .addInterceptor { chain ->
                 val request = chain.request()
                 val requestBuilder = request.newBuilder()
-                    .header("Authorization", com.mmb.hackathon2019.R.string.access_token.toString())
+                    .header("Authorization",NetworkManager.TOKEN)
 
                 val newRequest = requestBuilder.build()
                 chain.proceed(newRequest)
