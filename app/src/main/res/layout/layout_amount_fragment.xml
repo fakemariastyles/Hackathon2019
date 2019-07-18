@@ -14,7 +14,7 @@
             android:padding="4dp"
             android:id="@+id/serial"
             android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    <com.google.android.material.button.MaterialButton
+    <Button
             android:text="استعلام موجودی"
             android:background="#3F51B5"
             android:textAlignment="center"

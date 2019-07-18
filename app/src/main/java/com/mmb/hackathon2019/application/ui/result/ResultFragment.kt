@@ -40,10 +40,12 @@ class ResultFragment : Fragment() {
         val remainAmountTV =  view.findViewById<TextView>(R.id.remain_amount)
         viewModel.apply {
             result.observe(this@ResultFragment, androidx.lifecycle.Observer {
-//                remainAmountTV.text = it.remainAmount
-                remainAmountTV.text = "1000"
-                etCardIdTV.text = "12"
-                messageDetailTV.text = "no message found"
+                remainAmountTV.text = it.remainAmount.toString()
+                etCardIdTV.text = it.etCardId.toString()
+                messageDetailTV.text = it.messageDetail.toString()
+//                remainAmountTV.text = "1000"
+//                etCardIdTV.text = "12"
+//                messageDetailTV.text = "no message found"
             })
 
         }
