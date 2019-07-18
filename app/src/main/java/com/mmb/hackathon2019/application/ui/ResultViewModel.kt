@@ -21,6 +21,7 @@ class ResultViewModel @Inject constructor(private val hackathonRepository: Hacka
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 _result.postValue(it)
+                println(it)
             }, {
                 println(it)
             })

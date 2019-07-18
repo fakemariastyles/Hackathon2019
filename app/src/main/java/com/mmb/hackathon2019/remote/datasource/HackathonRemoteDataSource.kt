@@ -7,6 +7,10 @@ import javax.inject.Inject
 
 class HackathonRemoteDataSource @Inject constructor(private val networkManager: NetworkManager) {
     fun getBalance(serial: String): Single<ResultDto> {
-        return networkManager.getBalance(serial)
+        val res = networkManager.getBalance(serial)
+        res.map {
+            println(it)
+        }
+        return  res
     }
 }

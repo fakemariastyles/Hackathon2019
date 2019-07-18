@@ -23,7 +23,7 @@ class ResultFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel.getResult("1219823700")
+        viewModel.getResult("25426508")
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -37,8 +37,14 @@ class ResultFragment : Fragment() {
         val remainAmountTV =  view.findViewById<TextView>(R.id.remain_amount)
         viewModel.apply {
             result.observe(this@ResultFragment, androidx.lifecycle.Observer {
-                remainAmountTV.text = it.remainAmount
+//                remainAmountTV.text = it.remainAmount
+                remainAmountTV.text = "1000"
+                etCardIdTV.text = "12"
+                messageDetailTV.text = "no message found"
+
+
             })
+
         }
     }
 }
