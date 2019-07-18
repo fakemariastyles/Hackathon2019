@@ -34,7 +34,7 @@ class NetworkModule{
                 val newRequest = requestBuilder.build()
                 chain.proceed(newRequest)
             }
-            .build()
+            .build()x
     }
 
     @Provides
