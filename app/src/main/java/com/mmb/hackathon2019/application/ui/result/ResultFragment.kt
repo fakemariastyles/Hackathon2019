@@ -1,4 +1,4 @@
-package com.mmb.hackathon2019.application.ui
+package com.mmb.hackathon2019.application.ui.result
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,21 +9,24 @@ import androidx.fragment.app.Fragment
 import com.mmb.hackathon2019.R
 import com.mmb.hackathon2019.application.HackathonApp
 import com.mmb.hackathon2019.data.entity.ResultEntity
-import java.util.*
 import javax.inject.Inject
 
 class ResultFragment : Fragment() {
+    private var serial: String? = null
     @Inject
     lateinit var viewModel: ResultViewModel
     var result: ResultEntity? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         HackathonApp.component.inject(this)
+        serial = arguments?.getString(KEY_SERIAL)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel.getResult("25426508")
+        serial?.let {
+            viewModel.getResult(it)
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -41,10 +44,19 @@ class ResultFragment : Fragment() {
                 remainAmountTV.text = "1000"
                 etCardIdTV.text = "12"
                 messageDetailTV.text = "no message found"
-
-
             })
 
         }
+    }
+
+    companion object {
+        fun newInstance(slug: String?): ResultFragment {
+            return ResultFragment().apply {
+                arguments = Bundle().apply {
+                    putString(KEY_SERIAL, slug)
+                }
+            }
+        }
+        private const val KEY_SERIAL = "SERIAL"
     }
 }

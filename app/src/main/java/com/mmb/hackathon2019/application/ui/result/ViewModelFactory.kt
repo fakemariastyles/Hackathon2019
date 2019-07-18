@@ -1,4 +1,4 @@
-package com.mmb.hackathon2019.application.ui
+package com.mmb.hackathon2019.application.ui.result
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

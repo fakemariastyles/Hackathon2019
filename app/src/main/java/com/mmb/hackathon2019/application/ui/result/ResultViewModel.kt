@@ -1,4 +1,4 @@
-package com.mmb.hackathon2019.application.ui
+package com.mmb.hackathon2019.application.ui.result
 
 import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
