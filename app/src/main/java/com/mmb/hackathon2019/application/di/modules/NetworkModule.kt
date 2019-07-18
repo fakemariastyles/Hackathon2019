@@ -1,4 +1,4 @@
-package com.mmb.hackathon2019.data.di.modules
+package com.mmb.hackathon2019.application.di.modules
 
 import com.mmb.hackathon2019.R
 import com.mmb.hackathon2019.remote.api.NetworkManager
@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
-class NetworkMadule{
+class NetworkModule{
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit{
         return  Retrofit.Builder()
