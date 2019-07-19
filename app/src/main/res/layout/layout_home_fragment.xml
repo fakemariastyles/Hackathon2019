@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:background="@drawable/background_light2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.24"
+            android:id="@+id/gl1"/>
+    <Button android:layout_width="0dp" android:layout_height="0dp"
+            android:padding="3dp"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@id/charge_account_action"
+            android:layout_margin="5dp"
+            android:background="@drawable/less_round_rectangle"
+            android:text="استعلام موجودی"
+            app:layout_constraintBottom_toTopOf="@id/gl1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/get_amount_action"/>
+    <Button android:layout_width="wrap_content" android:layout_height="0dp"
+            android:background="@drawable/less_round_rectangle"
+            android:layout_margin="5dp"
+            android:text="شارژ اکانت"
+            app:layout_constraintBottom_toTopOf="@id/gl1"
+            android:id="@+id/charge_account_action"
+            app:layout_constraintStart_toEndOf="@+id/get_amount_action"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"
+            android:id="@+id/gl2"/>
+    <Button android:layout_width="wrap_content" android:layout_height="0dp"
+            android:background="@drawable/less_round_rectangle"
+            android:layout_margin="5dp"
+            android:id="@+id/get_traffic_report_action"
+            app:layout_constraintBottom_toTopOf="@id/charge_history_action"
+            app:layout_constraintTop_toBottomOf="@+id/gl1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="15dp"
+            android:text="گزارش تردد"/>
+    <Button android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:textSize="20dp"
+            android:background="@drawable/less_round_rectangle"
+            app:layout_constraintBottom_toTopOf="@id/gl2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/special_package_action"
+            app:layout_constraintStart_toEndOf="@id/get_traffic_report_action"
+            app:layout_constraintTop_toBottomOf="@+id/gl1"
+            android:text="بسته های تشویقی"
+    />
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.76"
+            android:id="@+id/gl3"/>
+    <Button android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/less_round_rectangle"
+            app:layout_constraintEnd_toStartOf="@id/move_charge_action"
+            android:id="@+id/nfc_action"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20dp"
+            android:text="NFC"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/gl3"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/gl2"/>
+
+
+
+    <Button android:layout_width="wrap_content" android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/nfc_action"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/less_round_rectangle"
+            android:id="@+id/move_charge_action"
+            android:text="انتقال اعتبار"
+            app:layout_constraintTop_toBottomOf="@id/gl2"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/gl3"
+            android:layout_marginTop="8dp"/>
+
+
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="@drawable/less_round_rectangle"
+            android:id="@+id/charge_history_action"
+            app:layout_constraintTop_toBottomOf="@+id/get_traffic_report_action"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toTopOf="@id/gl2"
+            app:layout_constraintEnd_toStartOf="@id/special_package_action"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="تاریخچه شارژ"
+            android:layout_marginLeft="40dp" android:layout_marginStart="40dp" android:layout_marginTop="8dp"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="1.0"/>
+    <Button android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:background="@drawable/less_round_rectangle"
+            android:layout_margin="5dp"
+            android:id="@+id/my_cards_action"
+            android:text="کارت های من"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gl3" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
