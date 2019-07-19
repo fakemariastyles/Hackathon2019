@@ -3,9 +3,10 @@
         xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:background="#F8E455"
+        android:background="@drawable/result_background"
         android:layout_height="match_parent">
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
+            android:background="@drawable/round_rectangle"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/get_amount"
             android:layout_margin="15dp"
@@ -16,7 +17,7 @@
             android:layout_width="match_parent" android:layout_height="wrap_content"/>
     <Button
             android:text="استعلام موجودی"
-            android:background="#3F51B5"
+            android:background="@drawable/round_button"
             android:textAlignment="center"
             android:padding="5dp"
             app:layout_constraintStart_toStartOf="parent"

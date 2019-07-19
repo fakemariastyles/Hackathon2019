@@ -6,8 +6,7 @@
         android:background="@drawable/result_background"
         android:layout_height="match_parent">
     <ImageView
-            android:layout_width="100dp" android:layout_height="100dp"
-            tools:background="#817D7D"
+            android:layout_width="150dp" android:layout_height="150dp"
             app:layout_constraintStart_toStartOf="parent"
             android:src="@mipmap/ic_launcher_round2"
             android:layout_marginBottom="20dp"
@@ -29,7 +28,8 @@
             app:layout_constraintTop_toTopOf="@id/et_card_id"
             app:layout_constraintBottom_toTopOf="@id/message"
             app:layout_constraintStart_toEndOf="@id/gl"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/credit_card"
             android:src="@drawable/ic_credit_card_black_24dp"/>
     <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
