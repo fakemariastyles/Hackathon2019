@@ -9,7 +9,7 @@
             android:layout_width="100dp" android:layout_height="100dp"
             tools:background="#817D7D"
             app:layout_constraintStart_toStartOf="parent"
-            android:src="@mipmap/ic_launcher_round"
+            android:src="@mipmap/ic_launcher_round2"
             android:layout_marginBottom="20dp"
             app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/et_card_id"/>
