@@ -6,10 +6,12 @@
         android:background="@drawable/blue_plain"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
     <ImageView android:layout_width="30dp" android:layout_height="30dp"
-    android:src="@drawable/Tehran_logo_2"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
+               app:layout_constraintTop_toTopOf="parent"
+               android:src="@drawable/tehran_logo"
+               app:layout_constraintStart_toStartOf="parent"/>
+
     <ImageView android:layout_width="match_parent"
                android:layout_height="0dp"
                android:src="@drawable/subway"
@@ -49,6 +51,7 @@
                app:layout_constraintBottom_toTopOf="@+id/gl0"
                android:layout_marginRight="10dp"
                app:layout_constraintStart_toStartOf="parent"
+
                android:id="@+id/imageView"/>
 
     <androidx.constraintlayout.widget.Guideline
@@ -66,7 +69,7 @@
     <Button android:layout_width="0dp" android:layout_height="0dp"
             android:padding="3dp"
             android:textSize="20dp"
-            app:layout_constraintEnd_toStartOf="@id/charge_account_action"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="5dp"
             android:background="@drawable/less_round_rectangle"
             android:text="استعلام موجودی"
@@ -74,16 +77,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gl0"
             android:id="@+id/get_amount_action"/>
-    <Button android:layout_width="wrap_content" android:layout_height="0dp"
-            android:background="@drawable/less_round_rectangle"
-            android:layout_margin="5dp"
-            android:text="شارژ اکانت"
-            app:layout_constraintBottom_toTopOf="@id/gl1"
-            android:id="@+id/charge_account_action"
-
-            app:layout_constraintStart_toEndOf="@+id/get_amount_action"
-            app:layout_constraintTop_toBottomOf="@id/gl0"
-            app:layout_constraintEnd_toEndOf="parent"/>
     <androidx.constraintlayout.widget.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

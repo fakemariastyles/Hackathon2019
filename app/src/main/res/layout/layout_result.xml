@@ -7,9 +7,10 @@
         android:background="@drawable/blue_plain"
         android:layout_height="match_parent">
     <ImageView android:layout_width="30dp" android:layout_height="30dp"
-               android:src="@drawable/Tehran_logo_2"
-               app:layout_constraintStart_toStartOf="parent"
-               app:layout_constraintTop_toTopOf="parent"/>
+               app:layout_constraintTop_toTopOf="parent"
+               android:src="@drawable/tehran_logo"
+               app:layout_constraintStart_toStartOf="parent"/>
+
     <ImageView
             android:layout_width="150dp" android:layout_height="150dp"
             app:layout_constraintStart_toStartOf="parent"
